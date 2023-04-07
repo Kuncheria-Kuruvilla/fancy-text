@@ -1,8 +1,8 @@
 import { FC } from "react";
 
-type HeadingProps = { text: string };
+type FancyTextProps = { text: string };
 
-const Heading: FC<HeadingProps> = ({ text }) => {
+const FancyText: FC<FancyTextProps> = ({ text }) => {
   const words = text.split(" ");
   return (
     <h1
@@ -35,4 +35,4 @@ const Heading: FC<HeadingProps> = ({ text }) => {
   );
 };
 
-export default Heading;
+export default FancyText;

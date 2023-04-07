@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
 
-import CoolText from "./CoolText";
+import FancyText from "./FancyText";
 
-const meta: Meta<typeof CoolText> = {
-  title: "Component/CoolText",
-  component: CoolText,
+const meta: Meta<typeof FancyText> = {
+  title: "Component/FancyText",
+  component: FancyText,
   parameters: {
     backgrounds: {
       default: "Dark Blue",
@@ -18,8 +18,8 @@ const meta: Meta<typeof CoolText> = {
 
 export default meta;
 
-export const Primary: StoryObj<typeof CoolText> = {
+export const Primary: StoryObj<typeof FancyText> = {
   args: {
-    text: "This is cool",
+    text: "This is Fancy :)",
   },
 };

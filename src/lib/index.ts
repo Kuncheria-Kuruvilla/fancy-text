@@ -1,1 +1,1 @@
-export { default as CoolText } from "./CoolText";
+export { default as FancyText } from "./FancyText";
