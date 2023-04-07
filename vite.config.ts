@@ -12,17 +12,17 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/lib/index.ts'),
-      name: 'CoolText',
-      formats: ['es', 'umd'],
-      fileName: (format) => `cool-text.${format}.js`,
+      entry: path.resolve(__dirname, "src/lib/index.ts"),
+      name: "FancyText",
+      formats: ["es", "umd"],
+      fileName: (format) => `fancy-text.${format}.js`,
     },
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ["react", "react-dom"],
       output: {
         globals: {
-          react: 'React',
-          'react-dom': 'ReactDOM',
+          react: "React",
+          "react-dom": "ReactDOM",
         },
       },
     },

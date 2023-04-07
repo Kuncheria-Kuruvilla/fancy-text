@@ -1,5 +1,5 @@
 {
-  "name": "cool-text",
+  "name": "fancy-text",
   "version": "0.0.2",
   "license": "MIT",
   "type": "module",
@@ -41,13 +41,13 @@
     "vite": "^4.2.0",
     "vite-plugin-dts": "^2.2.0"
   },
-  "main": "./dist/cool-text.umd.js",
-  "module": "./dist/cool-text.es.js",
+  "main": "./dist/fancy-text.umd.js",
+  "module": "./dist/fancy-text.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/cool-text.es.js",
-      "require": "./dist/cool-text.umd.js"
+      "import": "./dist/fancy-text.es.js",
+      "require": "./dist/fancy-text.umd.js"
     }
   }
 }
