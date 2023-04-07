@@ -1,8 +1,10 @@
 name: Publish package on NPM
 
 on:
-  release:
+  create:
     types: [published]
+    tags:
+      - 'v*.*.*'
 
 jobs:
   build:
