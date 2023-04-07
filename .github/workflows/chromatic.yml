@@ -4,9 +4,7 @@
 name: 'Chromatic Publish'
 
 # Event for the workflow
-on: 
-  release:
-    types: [created]
+on: workflow_dispatch
 
 # List of jobs
 jobs:
