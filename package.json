@@ -52,5 +52,13 @@
       "import": "./dist/fancy-text.es.js",
       "require": "./dist/fancy-text.umd.js"
     }
-  }
+  },
+  "keywords": [
+    "react",
+    "fancy",
+    "text",
+    "component",
+    "ui",
+    "storybook"
+  ]
 }
