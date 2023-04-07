@@ -5,14 +5,13 @@ type HeadingProps = { text: string };
 const Heading: FC<HeadingProps> = ({ text }) => {
   const words = text.split(" ");
   return (
-    <h2
+    <h1
       style={{
-        maxWidth: "70%",
         marginTop: "0px",
         marginBottom: "8px",
         textShadow: "3px 3px #011627",
         fontFamily: "sans-serif",
-        color: "#fff",
+        color: "#FFF",
       }}
     >
       {words.map((word) => (
@@ -32,7 +31,7 @@ const Heading: FC<HeadingProps> = ({ text }) => {
           {word}
         </span>
       ))}
-    </h2>
+    </h1>
   );
 };
 
