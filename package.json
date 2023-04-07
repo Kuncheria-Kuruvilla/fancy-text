@@ -45,8 +45,7 @@
   "module": "./dist/fancy-text.es.js",
   "types": "./dist/index.d.ts",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "exports": {
     ".": {
