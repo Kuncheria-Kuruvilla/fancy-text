@@ -4,7 +4,8 @@
 name: 'Chromatic Publish'
 
 # Event for the workflow
-on: release:
+on: 
+  release:
     types: [created]
 
 # List of jobs
