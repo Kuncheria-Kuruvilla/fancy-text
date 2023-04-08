@@ -1,1 +1,1 @@
-export { default as FancyText } from "./FancyText";
+export * from "./FancyText";
