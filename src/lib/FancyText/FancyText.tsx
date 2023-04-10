@@ -1,19 +1,27 @@
 import { FC } from "react";
+import styled from "styled-components";
 
-type FancyTextProps = { text: string };
+type Size = "sm" | "md" | "lg";
+const fontSizes = {
+  sm: "4rem",
+  md: "8rem",
+  lg: "16rem",
+} satisfies Record<Size,string>;
 
-const FancyText: FC<FancyTextProps> = ({ text }) => {
+type FancyTextProps = { text: string , size?: Size};
+
+const FancyText: FC<FancyTextProps> = ({ text ,size="md" }) => {
   const words = text.split(" ");
+  const StylesH1 = styled.h1<{ size: Size }>`
+  margin-top: 0px;
+  margin-bottom: 8px;
+  text-shadow: 3px 3px #011627;
+  font-family: sans-serif;
+  color: #FFF;
+  font-size: ${({ size  }) => fontSizes[size]};`;
+
   return (
-    <h1
-      style={{
-        marginTop: "0px",
-        marginBottom: "8px",
-        textShadow: "3px 3px #011627",
-        fontFamily: "sans-serif",
-        color: "#FFF",
-      }}
-    >
+    <StylesH1 size={size}>
       {words.map((word) => (
         <span
           key={word}
@@ -31,7 +39,7 @@ const FancyText: FC<FancyTextProps> = ({ text }) => {
           {word}
         </span>
       ))}
-    </h1>
+    </StylesH1>
   );
 };
 

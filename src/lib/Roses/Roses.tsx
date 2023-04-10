@@ -16,7 +16,7 @@ type RosesProps = {
   text: string;
   size?: Size;
 };
-const Roses: FC<RosesProps> = ({ text, size = "lg" }) => {
+const Roses: FC<RosesProps> = ({ text, size = "md" }) => {
   const StyledDiv = styled.div<{ size: Size }>`
     font-size: ${({ size  }) => fontSizes[size]};
     color: #fcedd8;
