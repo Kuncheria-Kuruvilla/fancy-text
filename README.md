@@ -22,7 +22,7 @@ function App() {
   )
 }
 ```
-You can find more examples in this [storybook](https://6430616c9dd94421cb7112ed-lzzpxdbcew.chromatic.com/?path=/story/component-fancytext--primary) for the components. 
+You can find more examples in this [storybook](https://www.chromatic.com/library?appId=6430616c9dd94421cb7112ed) for the components. 
 
 ## Contributing
 If you would like to contribute to React Fancy Texts, please feel free to submit a pull request. We welcome contributions of all kinds, including bug fixes, new features, and documentation improvements.
