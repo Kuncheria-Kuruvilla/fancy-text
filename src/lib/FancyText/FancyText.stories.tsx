@@ -21,5 +21,6 @@ export default meta;
 export const Primary: StoryObj<typeof FancyText> = {
   args: {
     text: "This is Fancy :)",
+    size: "md",
   },
 };

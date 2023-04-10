@@ -20,5 +20,6 @@ export default meta;
 export const Primary: StoryObj<typeof Roses> = {
   args: {
     text: "Roses",
+    size: "md",
   },
 };
