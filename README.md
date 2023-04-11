@@ -2,7 +2,7 @@
 # Fancy Text
 ![NPM](https://img.shields.io/npm/l/@kuncheria_k/fancy-text) ![npm](https://img.shields.io/npm/v/@kuncheria_k/fancy-text) 
 
-<a href="https://6430616c9dd94421cb7112ed-lzzpxdbcew.chromatic.com/?path=/story/component-fancytext--primary" target="_blank"><img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg"></a>
+<a href="https://www.chromatic.com/library?appId=6430616c9dd94421cb7112ed" target="_blank"><img src="https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg"></a>
 
 React Fancy Texts is a UI library package that allows you to create fancy looking headings and texts easily in your React applications. The library provides a collection of pre-designed text styles that you can use right out of the box, or customize to your liking.
 
