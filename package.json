@@ -3,6 +3,11 @@
   "version": "0.2.1",
   "license": "MIT",
   "type": "module",
+  "homepage": "https://www.chromatic.com/library?appId=6430616c9dd94421cb7112ed"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kuncheria-Kuruvilla/fancy-text"
+  }
   "scripts": {
     "dev": "tsc && vite build --watch",
     "build": "tsc && vite build",
