@@ -15,20 +15,22 @@ const ComponentWrapper = styled.div`
 
 const shadAnim = keyframes`
 0% {
-background-position: 0 0;
+  background-position: 0 0;
 }
 0% {
-background-position: 100% -100%;
+  background-position: 100% -100%;
 }`;
 
-const StyledH1 = styled.h1`
+const StyledH1 = styled.h1<{ textColor: string; backgroundColor: string, size: Size }>`
   display: inline-block;
   position: relative;
   margin: auto;
-  color: white;
+  margin: auto;
+  color: ${({ textColor }) => textColor};
   font-family: Righteous, serif;
-  font-size: 12em;
-  text-shadow: 0.03em 0.03em 0 #242424;
+  font-size: ${({ size  }) => fontSizes[size]};
+  text-shadow: 0.03em 0.03em 0 ${({ backgroundColor }) => backgroundColor};
+  padding-right: 0.2em;
 
   &:after {
     content: attr(data-shadow);
@@ -40,8 +42,8 @@ const StyledH1 = styled.h1`
     background-image: linear-gradient(
       45deg,
       transparent 45%,
-      hsla(48, 20%, 90%, 1) 45%,
-      hsla(48, 20%, 90%, 1) 55%,
+      ${({ textColor }) => textColor} 45%,
+      ${({ textColor }) => textColor} 55%,
       transparent 0
     );
     background-size: 0.05em 0.05em;
@@ -52,12 +54,43 @@ const StyledH1 = styled.h1`
   }
 `;
 
-type DangProps = { text: string };
+type Size = "sm" | "md" | "lg";
+const fontSizes = {
+  sm: "4rem",
+  md: "8rem",
+  lg: "16rem",
+} satisfies Record<Size,string>;
+type DangProps = {
+  text: string;
+  /**
+   * The background color where this text is placed. This is required to calculate the shadow color
+   */
+  backgroundColor: string;
+  /**
+   * Color of text
+   */
+  size?: Size;
+  textColor?: string;
+};
 
-const Dang: FC<DangProps> = ({ text }) => {
+const Dang: FC<DangProps> = ({
+  text,
+  textColor = "white",
+  size = "md",
+  backgroundColor = "black",
+}) => {
+  const words = text.split(" ");
   return (
     <ComponentWrapper>
-      <StyledH1 data-shadow={text}>{text}</StyledH1>
+      {words.map((word,i) => <StyledH1
+        key={i}
+        data-shadow={word}
+        size={size}
+        textColor={textColor}
+        backgroundColor={backgroundColor}
+      >
+        {word}
+      </StyledH1>)}
     </ComponentWrapper>
   );
 };

@@ -5,6 +5,15 @@ import Dang from "./Dang";
 const meta: Meta<typeof Dang> = {
   title: "Component/Dang",
   component: Dang,
+  parameters: {
+    backgrounds: {
+      default: "Default",
+      values: [
+        { name: "Default", value: "#4d5eb3" },
+        { name: "Dark", value: "#242424" },
+      ],
+    },
+  },
 };
 
 export default meta;
@@ -12,5 +21,7 @@ export default meta;
 export const Primary: StoryObj<typeof Dang> = {
   args: {
     text: "Dang",
+    textColor: "white",
+    backgroundColor: "#4d5eb3",
   },
 };
