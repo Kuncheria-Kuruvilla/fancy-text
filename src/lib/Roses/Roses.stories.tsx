@@ -4,6 +4,7 @@ import Roses from "./Roses";
 const meta: Meta<typeof Roses> = {
   title: "Component/Roses",
   component: Roses,
+  tags: ["autodocs"],
   parameters: {
     backgrounds: {
       default: "Default",

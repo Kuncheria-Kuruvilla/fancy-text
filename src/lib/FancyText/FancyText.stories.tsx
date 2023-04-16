@@ -5,6 +5,7 @@ import FancyText from "./FancyText";
 const meta: Meta<typeof FancyText> = {
   title: "Component/FancyText",
   component: FancyText,
+  tags: ["autodocs"],
   parameters: {
     backgrounds: {
       default: "Dark Blue",
