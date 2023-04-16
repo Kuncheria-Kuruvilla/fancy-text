@@ -1,5 +1,7 @@
 import { FC } from "react";
 import styled from "styled-components";
+import './main.css';
+
 type Size = "sm" | "md" | "lg";
 const fontSizes = {
   sm: "4rem",
@@ -12,18 +14,19 @@ const textShadow = {
   lg: `5px 5px 0px #eb452b, 10px 10px 0px #efa032, 15px 15px 0px #46b59b, 20px 20px 0px #017e7f, 25px 25px 0px #052939`
 } satisfies Record<Size,string>;
 
+const StyledDiv = styled.div<{ size: Size }>`
+font-size: ${({ size  }) => fontSizes[size]};
+color: #fcedd8;
+font-family: Niconne, cursive;
+font-weight: 700;
+text-shadow: ${({ size  }) => textShadow[size]};
+`;
+
 type RosesProps = {
   text: string;
   size?: Size;
 };
 const Roses: FC<RosesProps> = ({ text, size = "md" }) => {
-  const StyledDiv = styled.div<{ size: Size }>`
-    font-size: ${({ size  }) => fontSizes[size]};
-    color: #fcedd8;
-    font-family: "Niconne", cursive;
-    font-weight: 700;
-    text-shadow: ${({ size  }) => textShadow[size]};
-  `;
   return <StyledDiv size={size}>{text}</StyledDiv>;
 };
 

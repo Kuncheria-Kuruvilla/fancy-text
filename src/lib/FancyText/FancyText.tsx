@@ -8,20 +8,21 @@ const fontSizes = {
   lg: "16rem",
 } satisfies Record<Size,string>;
 
+const StyledH1 = styled.h1<{ size: Size }>`
+margin-top: 0px;
+margin-bottom: 8px;
+text-shadow: 3px 3px #011627;
+font-family: sans-serif;
+color: #FFF;
+font-size: ${({ size  }) => fontSizes[size]};`;
+
 type FancyTextProps = { text: string , size?: Size};
 
 const FancyText: FC<FancyTextProps> = ({ text ,size="md" }) => {
   const words = text.split(" ");
-  const StylesH1 = styled.h1<{ size: Size }>`
-  margin-top: 0px;
-  margin-bottom: 8px;
-  text-shadow: 3px 3px #011627;
-  font-family: sans-serif;
-  color: #FFF;
-  font-size: ${({ size  }) => fontSizes[size]};`;
 
   return (
-    <StylesH1 size={size}>
+    <StyledH1 size={size}>
       {words.map((word) => (
         <span
           key={word}
@@ -39,7 +40,7 @@ const FancyText: FC<FancyTextProps> = ({ text ,size="md" }) => {
           {word}
         </span>
       ))}
-    </StylesH1>
+    </StyledH1>
   );
 };
 
