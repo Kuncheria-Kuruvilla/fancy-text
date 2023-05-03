@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled, { keyframes } from "styled-components";
-import "./main.css";
+import FontsWrapper from "../FontsWrapper";
 
 const ComponentWrapper = styled.div`
   position: relative;
@@ -81,17 +81,19 @@ const Dang: FC<DangProps> = ({
 }) => {
   const words = text.split(" ");
   return (
-    <ComponentWrapper>
-      {words.map((word,i) => <StyledH1
-        key={i}
-        data-shadow={word}
-        size={size}
-        textColor={textColor}
-        backgroundColor={backgroundColor}
-      >
-        {word}
-      </StyledH1>)}
-    </ComponentWrapper>
+    <FontsWrapper>
+      <ComponentWrapper>
+        {words.map((word,i) => <StyledH1
+          key={i}
+          data-shadow={word}
+          size={size}
+          textColor={textColor}
+          backgroundColor={backgroundColor}
+        >
+          {word}
+        </StyledH1>)}
+      </ComponentWrapper>
+    </FontsWrapper>
   );
 };
 

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styled from "styled-components";
-import './main.css';
+import FontsWrapper from "../FontsWrapper";
 
 type Size = "sm" | "md" | "lg";
 const fontSizes = {
@@ -17,17 +17,16 @@ const textShadow = {
 const StyledDiv = styled.div<{ size: Size }>`
 font-size: ${({ size  }) => fontSizes[size]};
 color: #fcedd8;
-font-family: Niconne, cursive;
+font-family: 'Niconne', cursive;
 font-weight: 700;
-text-shadow: ${({ size  }) => textShadow[size]};
-`;
+text-shadow: ${({ size  }) => textShadow[size]};`;
 
 type RosesProps = {
   text: string;
   size?: Size;
 };
 const Roses: FC<RosesProps> = ({ text, size = "md" }) => {
-  return <StyledDiv size={size}>{text}</StyledDiv>;
+  return <FontsWrapper><StyledDiv size={size}>{text}</StyledDiv></FontsWrapper>;
 };
 
 export default Roses;
