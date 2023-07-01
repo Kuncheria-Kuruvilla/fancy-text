@@ -9,10 +9,7 @@ const meta: Meta<typeof Dang> = {
   parameters: {
     backgrounds: {
       default: "Default",
-      values: [
-        { name: "Default", value: "#4d5eb3" },
-        { name: "Dark", value: "#242424" },
-      ],
+      values: [{ name: "Default", value: "#4d5eb3" }],
     },
   },
 };
