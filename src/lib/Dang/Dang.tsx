@@ -25,7 +25,6 @@ const StyledH1 = styled.h1<{ textColor: string; backgroundColor: string, size: S
   display: inline-block;
   position: relative;
   margin: auto;
-  margin: auto;
   color: ${({ textColor }) => textColor};
   font-family: Righteous, serif;
   font-size: ${({ size  }) => fontSizes[size]};
