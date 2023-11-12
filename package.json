@@ -67,7 +67,8 @@
     "./style.css": {
       "require": "./dist/style.css",
       "default": "./dist/style.css"
-    }
+    },
+    "./dist/index.d.ts": "./dist/index.d.ts"
   },
   "keywords": [
     "react",
