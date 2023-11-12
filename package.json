@@ -61,6 +61,7 @@
   ],
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/fancy-text.es.js",
       "require": "./dist/fancy-text.umd.js"
     },
